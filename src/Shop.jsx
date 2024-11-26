@@ -6,7 +6,7 @@ import ShopItemCard from "./ShopItemCard";
 import shophero from "./assets/shophero.jpg";
 
 function Shop(){
-    const BASE_URL = "https://furnitureapi-ykrq.onrender.com/api/furniture"
+    const BASE_URL = "http://localhost:3000/api/furniture"
     const [Products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -73,7 +73,7 @@ function Shop(){
                 {/* Product Items */}
                 <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {Products.map((product) =>(
-                        <ShopItemCard key={product.id} image={product.imageUrl} name={product.name} price={product.price} />
+                        <ShopItemCard key={product.id} image={product.images[0]["url"]} name={product.name} price={product.price} />
                     ))}
                 </div> 
             </div>
