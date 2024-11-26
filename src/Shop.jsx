@@ -6,7 +6,7 @@ import ShopItemCard from "./ShopItemCard";
 import shophero from "./assets/shophero.jpg";
 
 function Shop(){
-    const BASE_URL = "http://localhost:3000/api/furniture"
+    const BASE_URL = "https://furnitureapi-ykrq.onrender.com/api/furniture"
     const [Products, setProducts] = useState([]);
 
     useEffect(() => {
